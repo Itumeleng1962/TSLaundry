@@ -30,7 +30,7 @@ export function Navbar() {
       data-testid="main-navbar"
     >
       <nav className="container-x flex items-center justify-between">
-        <Logo dark={!scrolled} />
+        <Logo dark={!scrolled} size="lg" />
 
         <div className="hidden items-center gap-8 lg:flex">
           {NAV_LINKS.map((l) => (
