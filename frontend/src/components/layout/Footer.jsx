@@ -13,7 +13,7 @@ export function Footer() {
             <Logo dark />
             <p className="mt-6 max-w-xs text-sm leading-relaxed text-white/50">
               {BRAND.slogan}. Premium laundry and subscription care, collected and delivered across
-              greater Johannesburg.
+              greater Katlehong.
             </p>
             <div className="mt-6 flex gap-3">
               {[Instagram, Facebook, Twitter].map((Icon, i) => (

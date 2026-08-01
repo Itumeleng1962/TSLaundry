@@ -1,25 +1,25 @@
 import { Link } from "react-router-dom";
-import { Droplets } from "lucide-react";
+import { BRAND } from "@/lib/constants";
 
-// Text-based wordmark with a gold droplet mark for crisp rendering at any size.
+// Official TS Unique Laundry eagle emblem used across the site.
 export function Logo({ dark = false, className = "" }) {
   return (
     <Link
       to="/"
       data-testid="brand-logo"
-      className={`group inline-flex items-center gap-2.5 ${className}`}
+      className={`group inline-flex items-center gap-3 ${className}`}
     >
-      <span className="relative flex h-9 w-9 items-center justify-center rounded-xl bg-gold/10 ring-1 ring-gold/30 transition-colors duration-300 group-hover:bg-gold/20">
-        <Droplets className="h-4.5 w-4.5 text-gold" strokeWidth={1.5} style={{ width: 18, height: 18 }} />
-      </span>
+      <img
+        src={BRAND.logo}
+        alt="TS Unique Laundry"
+        className="h-11 w-11 rounded-full object-cover ring-1 ring-gold/40 transition-transform duration-300 group-hover:scale-105"
+      />
       <span className="flex flex-col leading-none">
-        <span
-          className={`font-serif text-xl tracking-tight ${dark ? "text-white" : "text-ink"}`}
-        >
+        <span className={`font-serif text-xl tracking-tight ${dark ? "text-white" : "text-ink"}`}>
           TS Unique
         </span>
-        <span className="text-[9px] font-semibold uppercase tracking-[0.35em] text-gold">
-          Laundry
+        <span className="text-[9px] font-semibold uppercase tracking-[0.3em] text-gold">
+          Laundry · Est 2025
         </span>
       </span>
     </Link>

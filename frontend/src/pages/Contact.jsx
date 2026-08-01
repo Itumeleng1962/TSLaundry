@@ -47,7 +47,7 @@ export default function Contact() {
             <div className="relative h-64 overflow-hidden rounded-3xl border border-line bg-cloud" data-testid="map-placeholder">
               <div className="absolute inset-0 flex flex-col items-center justify-center gap-2 text-center">
                 <MapPin className="h-8 w-8 text-gold" strokeWidth={1.25} />
-                <p className="font-serif text-xl text-ink">Sandton, Johannesburg</p>
+                <p className="font-serif text-xl text-ink">Katlehong, Gauteng</p>
                 <p className="text-xs text-[#666666]">Google Maps embed placeholder</p>
               </div>
               <div className="absolute inset-0 opacity-[0.06]" style={{ backgroundImage: "radial-gradient(#111 1px, transparent 1px)", backgroundSize: "16px 16px" }} />

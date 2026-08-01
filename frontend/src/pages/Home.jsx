@@ -56,8 +56,9 @@ export default function Home() {
               initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 0.15 }}
               className="mt-7 max-w-lg text-lg leading-relaxed text-[#666666]"
             >
-              Premium wash, press and delivery for busy professionals, families and businesses across
-              Johannesburg. We collect it dirty, return it perfect.
+              Premium wash, press and delivery for busy professionals,
+              families and businesses across Katlehong. We collect it
+              dirty, return it perfect.
             </motion.p>
             <motion.div
               initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 0.25 }}
@@ -102,7 +103,7 @@ export default function Home() {
               animate={{ y: [0, 12, 0] }} transition={{ duration: 7, repeat: Infinity, ease: "easeInOut" }}
               className="glass-card absolute -right-4 top-10 rounded-2xl border border-line px-5 py-4 shadow-xl"
             >
-              <p className="font-serif text-3xl text-ink">R45<span className="text-sm text-[#666666]">/kg</span></p>
+              <p className="font-serif text-3xl text-ink">R19<span className="text-sm text-[#666666]">/kg</span></p>
               <p className="text-xs text-[#666666]">Wash & Fold from</p>
             </motion.div>
           </motion.div>
@@ -283,7 +284,7 @@ export default function Home() {
           <div className="noise relative overflow-hidden rounded-[2.5rem] bg-ink px-8 py-20 text-center text-white lg:px-16">
             <div className="relative z-10 mx-auto max-w-2xl">
               <h2 className="font-serif text-4xl font-light leading-tight sm:text-5xl">Ready to never do laundry again?</h2>
-              <p className="mt-5 text-lg text-white/60">Join thousands of Joburg households and businesses who've handed over the hamper for good.</p>
+              <p className="mt-5 text-lg text-white/60">Join the households, students and professionals across Katlehong who've handed over the hamper for good.</p>
               <div className="mt-9 flex flex-wrap justify-center gap-4">
                 <Link to="/register" className="rounded-full bg-gold px-8 py-4 text-sm font-medium text-white transition-all duration-300 hover:bg-white hover:text-ink hover:-translate-y-1">Get started free</Link>
                 <Link to="/contact" className="rounded-full border border-white/20 px-8 py-4 text-sm font-medium text-white transition-all duration-300 hover:bg-white/10">Talk to us</Link>

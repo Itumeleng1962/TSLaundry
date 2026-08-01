@@ -21,9 +21,9 @@ export function PricingCalculator() {
   const { subtotal, expressCost, deliveryCost, total } = useMemo(() => {
     const weight = kg[0];
     const base = PRICING.base[type] * weight;
-    const exp = express ? PRICING.addons.express * weight : 0;
+    const exp = express ? PRICING.addons.express : 0;
     const sub = base + exp;
-    const del = delivery ? (sub >= PRICING.deliveryFreeOver ? 0 : PRICING.addons.delivery) : 0;
+    const del = delivery ? PRICING.addons.delivery : 0;
     return { subtotal: base, expressCost: exp, deliveryCost: del, total: sub + del };
   }, [kg, type, express, delivery]);
 
@@ -75,8 +75,8 @@ export function PricingCalculator() {
           </div>
 
           <div className="space-y-3">
-            <Toggle checked={express} onChange={setExpress} label="Express (same day)" note={`+${ZAR(PRICING.addons.express)}/kg`} testid="calc-express" />
-            <Toggle checked={delivery} onChange={setDelivery} label="Collection & delivery" note={`Free over ${ZAR(PRICING.deliveryFreeOver)}`} testid="calc-delivery" />
+            <Toggle checked={express} onChange={setExpress} label="Express (same day)" note={`+${ZAR(PRICING.addons.express)} flat`} testid="calc-express" />
+            <Toggle checked={delivery} onChange={setDelivery} label="Collection & delivery" note={`Free within ${PRICING.deliveryFreeKm}km · else ${ZAR(PRICING.addons.delivery)}`} testid="calc-delivery" />
           </div>
         </div>
 

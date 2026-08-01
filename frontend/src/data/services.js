@@ -10,7 +10,7 @@ export const SERVICES = [
     icon: Shirt,
     title: "Wash & Fold",
     tagline: "Everyday freshness, perfectly folded",
-    from: 45,
+    from: 19,
     unit: "per kg",
     image:
       "https://images.unsplash.com/photo-1684248655527-46bee8e79029?crop=entropy&cs=srgb&fm=jpg&q=85&w=1400",
@@ -28,7 +28,7 @@ export const SERVICES = [
     icon: Sparkles,
     title: "Wash, Dry, Iron & Fold",
     tagline: "The complete crease-free treatment",
-    from: 65,
+    from: 22,
     unit: "per kg",
     image:
       "https://images.unsplash.com/photo-1603252110481-7ba873bf42ab?crop=entropy&cs=srgb&fm=jpg&q=85&w=1400",
@@ -46,8 +46,8 @@ export const SERVICES = [
     icon: PanelTop,
     title: "Iron Only",
     tagline: "Crisp, boardroom-ready pressing",
-    from: 35,
-    unit: "per item",
+    from: 8.5,
+    unit: "per kg",
     image:
       "https://images.unsplash.com/photo-1489274495757-95c7c837b101?crop=entropy&cs=srgb&fm=jpg&q=85&w=1400",
     description:
@@ -59,7 +59,7 @@ export const SERVICES = [
     icon: Layers,
     title: "Blankets",
     tagline: "Deep-clean comfort for the cold nights",
-    from: 120,
+    from: 50,
     unit: "per item",
     image:
       "https://images.unsplash.com/photo-1724847885015-be191f1a47ef?crop=entropy&cs=srgb&fm=jpg&q=85&w=1400",
@@ -72,7 +72,7 @@ export const SERVICES = [
     icon: Bath,
     title: "Duvets",
     tagline: "Hotel-fresh bedding, restored",
-    from: 150,
+    from: 50,
     unit: "per item",
     image:
       "https://images.unsplash.com/photo-1760722974657-f64bce2f9cc5?crop=entropy&cs=srgb&fm=jpg&q=85&w=1400",
@@ -85,8 +85,8 @@ export const SERVICES = [
     icon: Wind,
     title: "Curtains",
     tagline: "Refresh your rooms, effortlessly",
-    from: 90,
-    unit: "per kg",
+    from: 35,
+    unit: "per meter",
     image:
       "https://images.unsplash.com/photo-1724847885015-be191f1a47ef?crop=entropy&cs=srgb&fm=jpg&q=85&w=1400",
     description:
@@ -137,7 +137,7 @@ export const SERVICES = [
     icon: Zap,
     title: "Express Laundry",
     tagline: "Clean & back in your hands today",
-    from: 85,
+    from: 30,
     unit: "per kg",
     image:
       "https://images.unsplash.com/photo-1604335398980-ededcadcc37d?crop=entropy&cs=srgb&fm=jpg&q=85&w=1400",

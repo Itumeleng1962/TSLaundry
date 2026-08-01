@@ -15,7 +15,7 @@ const VALUES = [
 export default function About() {
   return (
     <>
-      <PageHero eyebrow="Our story" title="Founded on a simple belief: your time is precious" lede="TS Unique Laundry began in a small Johannesburg garage in 2019 with one van and a promise — laundry should never steal your weekend again." />
+      <PageHero eyebrow="Our story" title="Founded on a simple belief: your time is precious" lede="Established in 2025 in Katlehong, TS Unique Laundry began with one promise — clean, fresh, professionally handled laundry that makes everyday life easier. Rain or not, we serve." />
       <section className="container-x py-16 lg:py-24">
         <Reveal>
           <div className="overflow-hidden rounded-[2rem] border border-line shadow-[0_30px_80px_rgba(0,0,0,0.08)]">
@@ -26,10 +26,10 @@ export default function About() {
 
       <section className="bg-white py-20 lg:py-28">
         <div className="container-x grid gap-14 lg:grid-cols-2 lg:items-center">
-          <SectionHeading eyebrow="The mission" title="Premium care, made effortless" lede="What started as a side hustle for busy neighbours is now Joburg's most-loved laundry subscription — trusted by thousands of homes and businesses." />
+          <SectionHeading eyebrow="Vision & mission" title="Trusted fabric care for every community" lede="Our vision is to become a trusted, reliable laundry service known for quality, consistency and care. Our mission is to deliver clean, fresh, professionally handled laundry through efficient systems and excellent service." />
           <Reveal>
-            <p className="text-base leading-relaxed text-[#666666]">Today we run a fleet of eco-conscious vehicles and a modern facility staffed by fabric-care specialists. Every order is tracked, insured and handled with white-glove attention. Our slogan says it best: <span className="font-serif text-xl italic text-gold">Rain or Not We Serve.</span></p>
-            <p className="mt-4 text-base leading-relaxed text-[#666666]">We're proud to give thousands of South Africans their evenings and weekends back — one perfectly folded load at a time.</p>
+            <p className="text-base leading-relaxed text-[#666666]">We combine flexibility — pay-as-you-go or a monthly subscription — with transparent wash and kilogram tracking, so you always know exactly what you're getting. Our slogan says it best: <span className="font-serif text-xl italic text-gold">Rain or Not, we serve.</span></p>
+            <p className="mt-4 text-base leading-relaxed text-[#666666]">Whether you choose a once-off service or a subscription plan, every item is treated with attention and professionalism. Your clothes, our care.</p>
           </Reveal>
         </div>
       </section>

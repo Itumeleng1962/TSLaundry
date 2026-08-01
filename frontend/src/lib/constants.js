@@ -2,10 +2,10 @@
 export const BRAND = {
   name: "TS Unique Laundry",
   slogan: "Rain or Not We Serve",
-  phone: "+27 61 234 5678",
-  whatsapp: "27612345678",
-  email: "hello@tsuniquelaundry.co.za",
-  address: "42 Linden Avenue, Sandton, Johannesburg, 2196",
+  phone: "070 310 6403",
+  whatsapp: "27703106403",
+  email: "loudlyclean@gmail.com",
+  address: "304 Vlie Street, Skosana, Katlehong",
   hours: [
     { day: "Mon – Fri", time: "07:00 – 19:00" },
     { day: "Saturday", time: "08:00 – 17:00" },
@@ -13,7 +13,7 @@ export const BRAND = {
   ],
   socials: { instagram: "#", facebook: "#", twitter: "#", tiktok: "#" },
   logo:
-    "https://static.prod-images.emergentagent.com/jobs/89bb9098-3dad-44f2-acda-3e792e2ef6ae/images/baff510c60bcb35db53badd666f5e0f09ac8cd06ce671e291b3f9343f7f8215c.jpeg",
+    "https://customer-assets-wrfwihn1.emergentagent.net/job_luxury-clean-app-1/artifacts/llr2d9hf_TS%20Logo.jpeg",
 };
 
 export const NAV_LINKS = [

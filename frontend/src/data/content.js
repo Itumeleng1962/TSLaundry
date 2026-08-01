@@ -51,11 +51,11 @@ export const FAQS = [
   },
   {
     q: "What areas do you serve?",
-    a: "We currently service greater Johannesburg, Sandton, Randburg and surrounding suburbs, with Pretoria launching soon. Enter your address at checkout to confirm coverage.",
+    a: "We currently service Katlehong, Skosana and surrounding areas. Free collection and delivery within 3 km — beyond that a small R15 fee applies. Enter your address at checkout to confirm coverage.",
   },
   {
     q: "How is pricing calculated?",
-    a: "Most services are priced per kilogram, while specialist items like duvets and curtains are priced per item. Use our live pricing calculator for an instant estimate, or choose a subscription for the best value.",
+    a: "Most services are priced per kilogram (from R19/kg wash, dry & fold), while items like blankets, duvets and curtains have set rates. Prefer a monthly plan? Our 5-week subscription cycle includes 4 washes and saves you around R200 a month.",
   },
   {
     q: "What if a garment is damaged or lost?",
@@ -74,8 +74,8 @@ export const FAQS = [
     a: "We accept all major cards, along with PayFast and Ozow for instant EFT. Subscriptions are billed automatically each month.",
   },
   {
-    q: "Do unused washes roll over?",
-    a: "On Standard plans and above, up to 25% of unused kilograms roll over to the next month, so you never lose value.",
+    q: "How do referrals work?",
+    a: "Refer a friend and enjoy 20% OFF your next service for every successful referral — our way of saying thank you for spreading the word.",
   },
 ];
 

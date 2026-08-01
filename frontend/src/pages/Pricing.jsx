@@ -33,19 +33,27 @@ export default function Pricing() {
       </section>
 
       <section className="container-x py-20 lg:py-28">
-        <SectionHeading center eyebrow="For business" title="Commercial rates" lede="High-volume pricing for hospitality, corporate and Airbnb clients. Billed monthly with a dedicated manager." />
-        <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-          {PRICING.commercial.map((c, i) => (
+        <SectionHeading center eyebrow="Add-ons" title="Special services" lede="Beyond the everyday — bags, curtains, stain treatment and express, all at transparent rates." />
+        <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          {PRICING.special.map((c, i) => (
             <Reveal key={c.label} delay={i * 0.06}>
               <div className="rounded-3xl border border-line bg-white p-6 text-center transition-all hover:-translate-y-2 hover:shadow-[0_16px_60px_rgba(0,0,0,0.05)]">
-                <p className="font-serif text-4xl font-light text-gold">{ZAR(c.price)}</p>
+                <p className="font-serif text-4xl font-light text-gold">{c.price}</p>
                 <p className="text-xs text-[#666666]">{c.unit}</p>
                 <p className="mt-3 text-sm font-medium text-ink">{c.label}</p>
               </div>
             </Reveal>
           ))}
         </div>
-        <Reveal className="mt-10 text-center"><Link to="/contact" className="rounded-full bg-ink px-8 py-4 text-sm font-medium text-white transition-colors hover:bg-gold">Request a business quote</Link></Reveal>
+        <Reveal className="mt-12">
+          <div className="mx-auto flex max-w-3xl flex-col items-center gap-4 rounded-3xl border border-gold bg-gold/5 p-8 text-center sm:flex-row sm:justify-between sm:text-left">
+            <div>
+              <p className="font-serif text-2xl text-ink">Free collection &amp; delivery within 3 km</p>
+              <p className="mt-1 text-sm text-[#666666]">Beyond 3 km just R15 · Plus 20% OFF every referral</p>
+            </div>
+            <Link to="/contact" className="shrink-0 rounded-full bg-ink px-8 py-4 text-sm font-medium text-white transition-colors hover:bg-gold">Book a pickup</Link>
+          </div>
+        </Reveal>
       </section>
     </>
   );
