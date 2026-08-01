@@ -16,14 +16,14 @@ export default function ServiceDetail() {
       <section className="relative overflow-hidden bg-cloud pt-32 lg:pt-40">
         <div className="container-x grid items-center gap-14 pb-16 lg:grid-cols-2 lg:pb-24">
           <Reveal>
-            <Link to="/services" className="mb-6 inline-flex items-center gap-1.5 text-sm font-medium text-[#666666] transition-colors hover:text-ink"><ArrowLeft className="h-4 w-4" strokeWidth={1.75} /> All services</Link>
+            <Link to="/services" className="mb-6 inline-flex items-center gap-1.5 text-sm font-medium text-[#9A9A9A] transition-colors hover:text-cream"><ArrowLeft className="h-4 w-4" strokeWidth={1.75} /> All services</Link>
             <span className="flex h-14 w-14 items-center justify-center rounded-2xl bg-gold/10"><service.icon className="h-7 w-7 text-gold" strokeWidth={1.25} /></span>
-            <h1 className="mt-6 font-serif text-5xl font-light leading-tight tracking-tight text-ink sm:text-6xl">{service.title}</h1>
+            <h1 className="mt-6 font-serif text-5xl font-light leading-tight tracking-tight text-cream sm:text-6xl">{service.title}</h1>
             <p className="mt-3 text-lg text-gold">{service.tagline}</p>
-            <p className="mt-6 max-w-lg text-base leading-relaxed text-[#666666]">{service.description}</p>
+            <p className="mt-6 max-w-lg text-base leading-relaxed text-[#9A9A9A]">{service.description}</p>
             <div className="mt-8 flex flex-wrap items-center gap-4">
               <Link to="/register" data-testid="service-book-button" className="group inline-flex items-center gap-2 rounded-full bg-ink px-8 py-4 text-sm font-medium text-white transition-all duration-300 hover:bg-gold hover:-translate-y-1">Book now <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" strokeWidth={1.75} /></Link>
-              <span className="rounded-full border border-line bg-white px-6 py-4 text-sm text-[#666666]">From <b className="text-ink">{service.from ? ZAR(service.from) : "Free"}</b> {service.unit}</span>
+              <span className="rounded-full border border-line bg-surface px-6 py-4 text-sm text-[#9A9A9A]">From <b className="text-cream">{service.from ? ZAR(service.from) : "Free"}</b> {service.unit}</span>
             </div>
           </Reveal>
           <Reveal delay={0.1}>
@@ -34,18 +34,18 @@ export default function ServiceDetail() {
         </div>
       </section>
 
-      <section className="bg-white py-20 lg:py-28">
+      <section className="bg-surface py-20 lg:py-28">
         <div className="container-x grid gap-14 lg:grid-cols-2">
           <Reveal>
             <span className="text-xs font-bold uppercase tracking-[0.25em] text-gold">What's included</span>
-            <h2 className="mt-4 font-serif text-4xl font-light text-ink">Every detail, handled</h2>
+            <h2 className="mt-4 font-serif text-4xl font-light text-cream">Every detail, handled</h2>
           </Reveal>
           <div className="space-y-4">
             {service.benefits.map((b, i) => (
               <Reveal key={b} delay={i * 0.06}>
                 <div className="flex items-start gap-4 rounded-2xl border border-line bg-cloud p-5">
                   <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-gold/10"><Check className="h-4 w-4 text-gold" strokeWidth={2} /></span>
-                  <p className="text-base font-medium text-ink">{b}</p>
+                  <p className="text-base font-medium text-cream">{b}</p>
                 </div>
               </Reveal>
             ))}
@@ -54,12 +54,12 @@ export default function ServiceDetail() {
       </section>
 
       <section className="container-x py-20 lg:py-28">
-        <h2 className="font-serif text-3xl font-light text-ink">You might also like</h2>
+        <h2 className="font-serif text-3xl font-light text-cream">You might also like</h2>
         <div className="mt-8 grid gap-6 sm:grid-cols-3">
           {related.map((s) => (
-            <Link key={s.slug} to={`/services/${s.slug}`} className="group flex items-center gap-4 rounded-2xl border border-line bg-white p-5 transition-all hover:-translate-y-1 hover:shadow-md">
+            <Link key={s.slug} to={`/services/${s.slug}`} className="group flex items-center gap-4 rounded-2xl border border-line bg-surface p-5 transition-all hover:-translate-y-1 hover:shadow-md">
               <span className="flex h-12 w-12 items-center justify-center rounded-xl bg-gold/10"><s.icon className="h-5 w-5 text-gold" strokeWidth={1.5} /></span>
-              <div><p className="font-serif text-lg text-ink">{s.title}</p><p className="text-xs text-[#666666]">{s.tagline}</p></div>
+              <div><p className="font-serif text-lg text-cream">{s.title}</p><p className="text-xs text-[#9A9A9A]">{s.tagline}</p></div>
             </Link>
           ))}
         </div>

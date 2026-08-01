@@ -7,14 +7,14 @@ import { IMAGES } from "@/lib/constants";
 // Split-screen auth shell: form left, editorial visual right
 export function AuthLayout({ title, subtitle, children, footer }) {
   return (
-    <div className="min-h-screen bg-white lg:grid lg:grid-cols-2">
+    <div className="min-h-screen bg-surface lg:grid lg:grid-cols-2">
       <div className="flex min-h-screen flex-col justify-center px-6 py-12 sm:px-12 lg:px-16">
         <motion.div initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} className="mx-auto w-full max-w-md">
           <Logo />
-          <h1 className="mt-12 font-serif text-4xl font-light text-ink">{title}</h1>
-          <p className="mt-3 text-[#666666]">{subtitle}</p>
+          <h1 className="mt-12 font-serif text-4xl font-light text-cream">{title}</h1>
+          <p className="mt-3 text-[#9A9A9A]">{subtitle}</p>
           <div className="mt-8">{children}</div>
-          {footer && <div className="mt-8 text-center text-sm text-[#666666]">{footer}</div>}
+          {footer && <div className="mt-8 text-center text-sm text-[#9A9A9A]">{footer}</div>}
         </motion.div>
       </div>
 

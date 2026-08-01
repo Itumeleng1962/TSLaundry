@@ -36,7 +36,7 @@ export function PricingCalculator() {
         {/* Controls */}
         <div className="space-y-8 p-8 lg:p-10">
           <div>
-            <label className="text-xs font-bold uppercase tracking-[0.2em] text-[#666666]">Service type</label>
+            <label className="text-xs font-bold uppercase tracking-[0.2em] text-[#9A9A9A]">Service type</label>
             <div className="mt-3 grid grid-cols-3 gap-2">
               {TYPES.map((t) => (
                 <button
@@ -45,8 +45,8 @@ export function PricingCalculator() {
                   data-testid={`calc-type-${t.key}`}
                   className={`rounded-xl border px-2 py-3 text-xs font-medium leading-tight transition-all ${
                     type === t.key
-                      ? "border-gold bg-gold/10 text-ink"
-                      : "border-line bg-white text-[#666666] hover:border-ink/30"
+                      ? "border-gold bg-gold/10 text-cream"
+                      : "border-line bg-surface text-[#9A9A9A] hover:border-ink/30"
                   }`}
                 >
                   {t.label}
@@ -57,8 +57,8 @@ export function PricingCalculator() {
 
           <div>
             <div className="flex items-center justify-between">
-              <label className="text-xs font-bold uppercase tracking-[0.2em] text-[#666666]">Weight</label>
-              <span className="font-serif text-2xl text-ink">{kg[0]} kg</span>
+              <label className="text-xs font-bold uppercase tracking-[0.2em] text-[#9A9A9A]">Weight</label>
+              <span className="font-serif text-2xl text-cream">{kg[0]} kg</span>
             </div>
             <Slider
               value={kg}
@@ -69,7 +69,7 @@ export function PricingCalculator() {
               className="mt-5"
               data-testid="calc-weight-slider"
             />
-            <div className="mt-2 flex justify-between text-xs text-[#666666]">
+            <div className="mt-2 flex justify-between text-xs text-[#9A9A9A]">
               <span>1 kg</span><span>50 kg</span>
             </div>
           </div>
@@ -96,7 +96,7 @@ export function PricingCalculator() {
             <Link
               to="/register"
               data-testid="calc-book-button"
-              className="group mt-6 flex w-full items-center justify-center gap-2 rounded-full bg-gold py-4 text-sm font-medium text-white transition-all duration-300 hover:bg-white hover:text-ink"
+              className="group mt-6 flex w-full items-center justify-center gap-2 rounded-full bg-gold py-4 text-sm font-medium text-white transition-all duration-300 hover:bg-surface hover:text-cream"
             >
               Book this order
               <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" strokeWidth={1.75} />
@@ -123,12 +123,12 @@ function Toggle({ checked, onChange, label, note, testid }) {
       onClick={() => onChange(!checked)}
       data-testid={testid}
       className={`flex w-full items-center justify-between rounded-xl border px-4 py-3.5 text-left transition-all ${
-        checked ? "border-gold bg-gold/5" : "border-line bg-white hover:border-ink/20"
+        checked ? "border-gold bg-gold/5" : "border-line bg-surface hover:border-ink/20"
       }`}
     >
       <div>
-        <p className="text-sm font-medium text-ink">{label}</p>
-        <p className="text-xs text-[#666666]">{note}</p>
+        <p className="text-sm font-medium text-cream">{label}</p>
+        <p className="text-xs text-[#9A9A9A]">{note}</p>
       </div>
       <span className={`flex h-6 w-6 items-center justify-center rounded-full border ${checked ? "border-gold bg-gold text-white" : "border-line"}`}>
         {checked && <Check className="h-3.5 w-3.5" strokeWidth={2.5} />}

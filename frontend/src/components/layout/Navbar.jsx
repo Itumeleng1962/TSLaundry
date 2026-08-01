@@ -39,7 +39,7 @@ export function Navbar() {
               data-testid={`nav-link-${l.label.toLowerCase().replace(/\s+/g, "-")}`}
               className={({ isActive }) =>
                 `gold-underline text-sm font-medium transition-colors ${
-                  isActive ? "text-gold" : "text-ink/80 hover:text-ink"
+                  isActive ? "text-gold" : "text-cream/80 hover:text-cream"
                 }`
               }
             >
@@ -62,7 +62,7 @@ export function Navbar() {
               <Link
                 to="/login"
                 data-testid="nav-login-link"
-                className="text-sm font-medium text-ink/80 transition-colors hover:text-ink"
+                className="text-sm font-medium text-cream/80 transition-colors hover:text-cream"
               >
                 Sign in
               </Link>
@@ -106,7 +106,7 @@ export function Navbar() {
                   onClick={() => setOpen(false)}
                   className={({ isActive }) =>
                     `rounded-lg px-3 py-3 text-base font-medium ${
-                      isActive ? "bg-gold/10 text-gold" : "text-ink hover:bg-cloud"
+                      isActive ? "bg-gold/10 text-gold" : "text-cream hover:bg-cloud"
                     }`
                   }
                 >

@@ -11,13 +11,13 @@ export function SectionHeading({ eyebrow, title, lede, center = false, dark = fa
       )}
       <h2
         className={`font-serif text-4xl font-light leading-[1.05] tracking-tight sm:text-5xl ${
-          dark ? "text-white" : "text-ink"
+          dark ? "text-white" : "text-cream"
         }`}
       >
         {title}
       </h2>
       {lede && (
-        <p className={`mt-5 text-base leading-relaxed sm:text-lg ${dark ? "text-white/60" : "text-[#666666]"}`}>
+        <p className={`mt-5 text-base leading-relaxed sm:text-lg ${dark ? "text-white/60" : "text-[#9A9A9A]"}`}>
           {lede}
         </p>
       )}

@@ -35,10 +35,10 @@ export default function DashboardHome() {
             <ResponsiveContainer width="100%" height={280}>
               <AreaChart data={USAGE_TREND} margin={{ left: -20, right: 8, top: 8 }}>
                 <defs><linearGradient id="g" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stopColor={GOLD} stopOpacity={0.3} /><stop offset="100%" stopColor={GOLD} stopOpacity={0} /></linearGradient></defs>
-                <CartesianGrid strokeDasharray="3 3" stroke="#ECECEC" vertical={false} />
+                <CartesianGrid strokeDasharray="3 3" stroke="#2A2A2A" vertical={false} />
                 <XAxis dataKey="month" stroke="#666" fontSize={12} tickLine={false} axisLine={false} />
                 <YAxis stroke="#666" fontSize={12} tickLine={false} axisLine={false} />
-                <Tooltip contentStyle={{ borderRadius: 12, border: "1px solid #ECECEC" }} />
+                <Tooltip contentStyle={{ borderRadius: 12, border: "1px solid #2A2A2A" }} />
                 <Area type="monotone" dataKey="kg" stroke={GOLD} strokeWidth={2.5} fill="url(#g)" />
               </AreaChart>
             </ResponsiveContainer>
@@ -49,7 +49,7 @@ export default function DashboardHome() {
           <Panel title="Plan usage">
             <div className="space-y-6">
               <div>
-                <div className="mb-2 flex justify-between text-sm"><span className="text-[#666666]">Kilograms</span><span className="font-medium text-ink">{kgPct}%</span></div>
+                <div className="mb-2 flex justify-between text-sm"><span className="text-[#9A9A9A]">Kilograms</span><span className="font-medium text-cream">{kgPct}%</span></div>
                 <Progress value={kgPct} className="h-2 bg-cloud [&>div]:bg-gold" />
               </div>
               <ResponsiveContainer width="100%" height={180}>
@@ -57,12 +57,12 @@ export default function DashboardHome() {
                   <Pie data={SERVICE_SPLIT} dataKey="value" innerRadius={45} outerRadius={70} paddingAngle={3}>
                     {SERVICE_SPLIT.map((e, i) => <Cell key={i} fill={COLORS[i % COLORS.length]} />)}
                   </Pie>
-                  <Tooltip contentStyle={{ borderRadius: 12, border: "1px solid #ECECEC" }} />
+                  <Tooltip contentStyle={{ borderRadius: 12, border: "1px solid #2A2A2A" }} />
                 </PieChart>
               </ResponsiveContainer>
               <div className="space-y-1.5">
                 {SERVICE_SPLIT.map((s, i) => (
-                  <div key={s.name} className="flex items-center justify-between text-xs"><span className="flex items-center gap-2 text-[#666666]"><span className="h-2.5 w-2.5 rounded-full" style={{ background: COLORS[i] }} />{s.name}</span><span className="font-medium text-ink">{s.value}%</span></div>
+                  <div key={s.name} className="flex items-center justify-between text-xs"><span className="flex items-center gap-2 text-[#9A9A9A]"><span className="h-2.5 w-2.5 rounded-full" style={{ background: COLORS[i] }} />{s.name}</span><span className="font-medium text-cream">{s.value}%</span></div>
                 ))}
               </div>
             </div>
@@ -76,7 +76,7 @@ export default function DashboardHome() {
             <div className="space-y-3">
               {LAUNDRY_HISTORY.slice(0, 4).map((o) => (
                 <div key={o.id} className="flex items-center justify-between rounded-xl border border-line px-4 py-3">
-                  <div><p className="text-sm font-medium text-ink">{o.service}</p><p className="text-xs text-[#666666]">{o.id} · {o.date} · {o.kg}kg</p></div>
+                  <div><p className="text-sm font-medium text-cream">{o.service}</p><p className="text-xs text-[#9A9A9A]">{o.id} · {o.date} · {o.kg}kg</p></div>
                   <StatusPill status={o.status} />
                 </div>
               ))}
@@ -91,15 +91,15 @@ export default function DashboardHome() {
                 {NOTIFICATIONS.slice(0, 3).map((n) => (
                   <div key={n.id} className="flex items-start gap-3">
                     <span className={`mt-1.5 h-2 w-2 shrink-0 rounded-full ${n.unread ? "bg-gold" : "bg-line"}`} />
-                    <div><p className="text-sm text-ink">{n.title}</p><p className="text-xs text-[#666666]">{n.time}</p></div>
+                    <div><p className="text-sm text-cream">{n.title}</p><p className="text-xs text-[#9A9A9A]">{n.time}</p></div>
                   </div>
                 ))}
               </div>
             </Panel>
             <div className="rounded-2xl border border-gold bg-gold/5 p-6">
               <Gift className="h-6 w-6 text-gold" strokeWidth={1.25} />
-              <p className="mt-3 font-serif text-lg text-ink">Give R60, get R60</p>
-              <p className="mt-1 text-xs text-[#666666]">Share your code and earn credit on every friend who joins.</p>
+              <p className="mt-3 font-serif text-lg text-cream">Give R60, get R60</p>
+              <p className="mt-1 text-xs text-[#9A9A9A]">Share your code and earn credit on every friend who joins.</p>
               <Link to="/dashboard/referrals" className="mt-4 inline-block rounded-full bg-ink px-5 py-2.5 text-xs font-medium text-white">Invite friends</Link>
             </div>
           </div>

@@ -27,7 +27,7 @@ export default function ForgotPassword() {
       {sent ? (
         <div className="flex flex-col items-center gap-4 rounded-2xl border border-line bg-cloud p-8 text-center" data-testid="forgot-success">
           <CheckCircle2 className="h-12 w-12 text-gold" strokeWidth={1.25} />
-          <p className="text-sm text-[#666666]">If an account exists for that email, a reset link is on its way. It expires in 30 minutes.</p>
+          <p className="text-sm text-[#9A9A9A]">If an account exists for that email, a reset link is on its way. It expires in 30 minutes.</p>
         </div>
       ) : (
         <form onSubmit={handleSubmit(onSubmit)} className="space-y-5" data-testid="forgot-form">

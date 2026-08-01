@@ -36,7 +36,7 @@ export default function Register() {
         <AuthField label="Full name" error={errors.name}><input {...register("name")} data-testid="register-name" className={authInputClass} placeholder="Your name" /></AuthField>
         <AuthField label="Email" error={errors.email}><input {...register("email")} data-testid="register-email" className={authInputClass} placeholder="you@email.co.za" /></AuthField>
         <AuthField label="Password" error={errors.password}><input type="password" {...register("password")} data-testid="register-password" className={authInputClass} placeholder="••••••••" /></AuthField>
-        <label className="flex items-start gap-3 text-sm text-[#666666]">
+        <label className="flex items-start gap-3 text-sm text-[#9A9A9A]">
           <input type="checkbox" {...register("terms")} data-testid="register-terms" className="mt-0.5 h-4 w-4 accent-[#C89D2A]" />
           <span>I agree to the <Link to="/terms" className="text-gold">Terms</Link> and <Link to="/privacy" className="text-gold">Privacy Policy</Link>.</span>
         </label>

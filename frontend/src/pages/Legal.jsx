@@ -27,8 +27,8 @@ export function Legal({ type }) {
         <div className="mx-auto max-w-3xl space-y-10">
           {SECTIONS[type].map((s, i) => (
             <Reveal key={s.h} delay={i * 0.04}>
-              <h2 className="font-serif text-2xl text-ink">{s.h}</h2>
-              <p className="mt-3 text-base leading-relaxed text-[#666666]">{s.p}</p>
+              <h2 className="font-serif text-2xl text-cream">{s.h}</h2>
+              <p className="mt-3 text-base leading-relaxed text-[#9A9A9A]">{s.p}</p>
             </Reveal>
           ))}
         </div>

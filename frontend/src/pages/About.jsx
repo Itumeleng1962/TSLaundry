@@ -24,12 +24,12 @@ export default function About() {
         </Reveal>
       </section>
 
-      <section className="bg-white py-20 lg:py-28">
+      <section className="bg-surface py-20 lg:py-28">
         <div className="container-x grid gap-14 lg:grid-cols-2 lg:items-center">
           <SectionHeading eyebrow="Vision & mission" title="Trusted fabric care for every community" lede="Our vision is to become a trusted, reliable laundry service known for quality, consistency and care. Our mission is to deliver clean, fresh, professionally handled laundry through efficient systems and excellent service." />
           <Reveal>
-            <p className="text-base leading-relaxed text-[#666666]">We combine flexibility — pay-as-you-go or a monthly subscription — with transparent wash and kilogram tracking, so you always know exactly what you're getting. Our slogan says it best: <span className="font-serif text-xl italic text-gold">Rain or Not, we serve.</span></p>
-            <p className="mt-4 text-base leading-relaxed text-[#666666]">Whether you choose a once-off service or a subscription plan, every item is treated with attention and professionalism. Your clothes, our care.</p>
+            <p className="text-base leading-relaxed text-[#9A9A9A]">We combine flexibility — pay-as-you-go or a monthly subscription — with transparent wash and kilogram tracking, so you always know exactly what you're getting. Our slogan says it best: <span className="font-serif text-xl italic text-gold">Rain or Not, we serve.</span></p>
+            <p className="mt-4 text-base leading-relaxed text-[#9A9A9A]">Whether you choose a once-off service or a subscription plan, every item is treated with attention and professionalism. Your clothes, our care.</p>
           </Reveal>
         </div>
       </section>
@@ -39,10 +39,10 @@ export default function About() {
         <div className="mt-14 grid gap-6 md:grid-cols-3">
           {VALUES.map((v, i) => (
             <Reveal key={v.title} delay={i * 0.08} className="h-full">
-              <div className="flex h-full flex-col rounded-3xl border border-line bg-white p-8">
+              <div className="flex h-full flex-col rounded-3xl border border-line bg-surface p-8">
                 <span className="flex h-12 w-12 items-center justify-center rounded-2xl bg-gold/10"><v.icon className="h-6 w-6 text-gold" strokeWidth={1.25} /></span>
-                <h3 className="mt-6 font-serif text-2xl text-ink">{v.title}</h3>
-                <p className="mt-3 text-sm leading-relaxed text-[#666666]">{v.text}</p>
+                <h3 className="mt-6 font-serif text-2xl text-cream">{v.title}</h3>
+                <p className="mt-3 text-sm leading-relaxed text-[#9A9A9A]">{v.text}</p>
               </div>
             </Reveal>
           ))}

@@ -36,19 +36,19 @@ export default function Contact() {
               <InfoCard icon={MapPin} label="Visit us" value={BRAND.address} />
               <InfoCard icon={MessageCircle} label="WhatsApp" value="Chat now" href={`https://wa.me/${BRAND.whatsapp}`} />
             </div>
-            <div className="rounded-3xl border border-line bg-white p-6">
+            <div className="rounded-3xl border border-line bg-surface p-6">
               <div className="flex items-center gap-2 text-gold"><Clock className="h-5 w-5" strokeWidth={1.5} /><span className="text-xs font-bold uppercase tracking-wider">Business hours</span></div>
               <ul className="mt-4 space-y-2">
                 {BRAND.hours.map((h) => (
-                  <li key={h.day} className="flex justify-between text-sm"><span className="text-[#666666]">{h.day}</span><span className="font-medium text-ink">{h.time}</span></li>
+                  <li key={h.day} className="flex justify-between text-sm"><span className="text-[#9A9A9A]">{h.day}</span><span className="font-medium text-cream">{h.time}</span></li>
                 ))}
               </ul>
             </div>
             <div className="relative h-64 overflow-hidden rounded-3xl border border-line bg-cloud" data-testid="map-placeholder">
               <div className="absolute inset-0 flex flex-col items-center justify-center gap-2 text-center">
                 <MapPin className="h-8 w-8 text-gold" strokeWidth={1.25} />
-                <p className="font-serif text-xl text-ink">Katlehong, Gauteng</p>
-                <p className="text-xs text-[#666666]">Google Maps embed placeholder</p>
+                <p className="font-serif text-xl text-cream">Katlehong, Gauteng</p>
+                <p className="text-xs text-[#9A9A9A]">Google Maps embed placeholder</p>
               </div>
               <div className="absolute inset-0 opacity-[0.06]" style={{ backgroundImage: "radial-gradient(#111 1px, transparent 1px)", backgroundSize: "16px 16px" }} />
             </div>
@@ -56,8 +56,8 @@ export default function Contact() {
 
           {/* Form */}
           <Reveal delay={0.1}>
-            <form onSubmit={handleSubmit(onSubmit)} className="rounded-3xl border border-line bg-white p-8 lg:p-10" data-testid="contact-form">
-              <h2 className="font-serif text-3xl font-light text-ink">Send a message</h2>
+            <form onSubmit={handleSubmit(onSubmit)} className="rounded-3xl border border-line bg-surface p-8 lg:p-10" data-testid="contact-form">
+              <h2 className="font-serif text-3xl font-light text-cream">Send a message</h2>
               <div className="mt-8 space-y-5">
                 <Field label="Full name" error={errors.name}><input {...register("name")} data-testid="contact-name" className="input-field" placeholder="Your name" /></Field>
                 <div className="grid gap-5 sm:grid-cols-2">
@@ -73,17 +73,17 @@ export default function Contact() {
           </Reveal>
         </div>
       </section>
-      <style>{`.input-field{width:100%;border-radius:0.75rem;border:1px solid #ECECEC;background:#fff;padding:0.85rem 1rem;font-size:0.9rem;outline:none;transition:border-color .2s}.input-field:focus{border-color:#C89D2A}`}</style>
+      <style>{`.input-field{width:100%;border-radius:0.75rem;border:1px solid #2A2A2A;background:#161616;color:#F4F1EA;padding:0.85rem 1rem;font-size:0.9rem;outline:none;transition:border-color .2s}.input-field:focus{border-color:#C89D2A}`}</style>
     </>
   );
 }
 
 function InfoCard({ icon: Icon, label, value, href }) {
   const inner = (
-    <div className="flex h-full flex-col rounded-3xl border border-line bg-white p-6 transition-all hover:-translate-y-1 hover:shadow-md">
+    <div className="flex h-full flex-col rounded-3xl border border-line bg-surface p-6 transition-all hover:-translate-y-1 hover:shadow-md">
       <Icon className="h-6 w-6 text-gold" strokeWidth={1.25} />
-      <p className="mt-4 text-xs font-bold uppercase tracking-wider text-[#666666]">{label}</p>
-      <p className="mt-1 text-sm font-medium text-ink">{value}</p>
+      <p className="mt-4 text-xs font-bold uppercase tracking-wider text-[#9A9A9A]">{label}</p>
+      <p className="mt-1 text-sm font-medium text-cream">{value}</p>
     </div>
   );
   return href ? <a href={href} target="_blank" rel="noopener noreferrer">{inner}</a> : inner;
@@ -92,7 +92,7 @@ function InfoCard({ icon: Icon, label, value, href }) {
 function Field({ label, error, children }) {
   return (
     <div>
-      <label className="mb-2 block text-xs font-bold uppercase tracking-wider text-[#666666]">{label}</label>
+      <label className="mb-2 block text-xs font-bold uppercase tracking-wider text-[#9A9A9A]">{label}</label>
       {children}
       {error && <p className="mt-1.5 text-xs text-red-500">{error.message}</p>}
     </div>

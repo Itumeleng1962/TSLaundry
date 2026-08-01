@@ -35,7 +35,7 @@ export default function Login() {
         <AuthField label="Password" error={errors.password}><input type="password" {...register("password")} data-testid="login-password" className={authInputClass} placeholder="••••••••" /></AuthField>
         <div className="flex justify-end"><Link to="/forgot-password" className="text-sm font-medium text-gold">Forgot password?</Link></div>
         <button type="submit" disabled={isSubmitting} data-testid="login-submit" className="w-full rounded-full bg-ink py-4 text-sm font-medium text-white transition-colors hover:bg-gold disabled:opacity-60">{isSubmitting ? "Signing in..." : "Sign in"}</button>
-        <p className="rounded-xl bg-cloud px-4 py-3 text-center text-xs text-[#666666]">Demo: any email works. Use <b className="text-ink">admin@ts.co.za</b> for the admin view.</p>
+        <p className="rounded-xl bg-cloud px-4 py-3 text-center text-xs text-[#9A9A9A]">Demo: any email works. Use <b className="text-cream">admin@ts.co.za</b> for the admin view.</p>
       </form>
     </AuthLayout>
   );

@@ -15,7 +15,7 @@ export function Logo({ dark = false, className = "" }) {
         className="h-11 w-11 rounded-full object-cover ring-1 ring-gold/40 transition-transform duration-300 group-hover:scale-105"
       />
       <span className="flex flex-col leading-none">
-        <span className={`font-serif text-xl tracking-tight ${dark ? "text-white" : "text-ink"}`}>
+        <span className={`font-serif text-xl tracking-tight ${dark ? "text-white" : "text-cream"}`}>
           TS Unique
         </span>
         <span className="text-[9px] font-semibold uppercase tracking-[0.3em] text-gold">

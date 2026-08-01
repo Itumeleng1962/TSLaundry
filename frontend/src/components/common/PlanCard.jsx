@@ -11,7 +11,7 @@ export function PlanCard({ plan, index = 0 }) {
       className={`relative flex flex-col rounded-3xl border p-8 transition-all duration-500 ${
         rec
           ? "border-gold bg-ink text-white shadow-[0_24px_80px_rgba(200,157,42,0.25)] lg:-translate-y-4"
-          : "border-line bg-white text-ink hover:-translate-y-2 hover:shadow-[0_16px_60px_rgba(0,0,0,0.06)]"
+          : "border-line bg-surface text-cream hover:-translate-y-2 hover:shadow-[0_16px_60px_rgba(0,0,0,0.06)]"
       }`}
     >
       {rec && (
@@ -20,22 +20,22 @@ export function PlanCard({ plan, index = 0 }) {
         </span>
       )}
       <h3 className="font-serif text-2xl">{plan.name}</h3>
-      <p className={`mt-1 text-sm ${rec ? "text-white/60" : "text-[#666666]"}`}>{plan.tagline}</p>
+      <p className={`mt-1 text-sm ${rec ? "text-white/60" : "text-[#9A9A9A]"}`}>{plan.tagline}</p>
 
       <div className="mt-6 flex items-end gap-1">
         <span className="font-serif text-5xl font-light">{ZAR(plan.price)}</span>
-        <span className={`mb-2 text-sm ${rec ? "text-white/50" : "text-[#666666]"}`}>/month</span>
+        <span className={`mb-2 text-sm ${rec ? "text-white/50" : "text-[#9A9A9A]"}`}>/month</span>
       </div>
-      <div className={`mt-3 flex gap-4 text-sm ${rec ? "text-white/70" : "text-[#666666]"}`}>
-        <span><b className={rec ? "text-gold" : "text-ink"}>{plan.kg}kg</b> included</span>
-        <span><b className={rec ? "text-gold" : "text-ink"}>{plan.washes}</b> collections</span>
+      <div className={`mt-3 flex gap-4 text-sm ${rec ? "text-white/70" : "text-[#9A9A9A]"}`}>
+        <span><b className={rec ? "text-gold" : "text-cream"}>{plan.kg}kg</b> included</span>
+        <span><b className={rec ? "text-gold" : "text-cream"}>{plan.washes}</b> collections</span>
       </div>
 
       <Link
         to="/register"
         data-testid={`plan-cta-${plan.id}`}
         className={`mt-8 rounded-full py-3.5 text-center text-sm font-medium transition-all duration-300 ${
-          rec ? "bg-gold text-white hover:bg-white hover:text-ink" : "bg-ink text-white hover:bg-gold"
+          rec ? "bg-gold text-white hover:bg-surface hover:text-cream" : "bg-ink text-white hover:bg-gold"
         }`}
       >
         Choose {plan.name}
@@ -45,7 +45,7 @@ export function PlanCard({ plan, index = 0 }) {
         {plan.features.map((f) => (
           <li key={f} className="flex items-start gap-3 text-sm">
             <Check className={`mt-0.5 h-4 w-4 shrink-0 ${rec ? "text-gold" : "text-gold"}`} strokeWidth={2} />
-            <span className={rec ? "text-white/80" : "text-ink/80"}>{f}</span>
+            <span className={rec ? "text-white/80" : "text-cream/80"}>{f}</span>
           </li>
         ))}
         {plan.excluded?.map((f) => (

@@ -41,20 +41,20 @@ export default function Home() {
           <div>
             <motion.span
               initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}
-              className="inline-flex items-center gap-2 rounded-full border border-line bg-white px-4 py-1.5 text-xs font-medium text-[#666666]"
+              className="inline-flex items-center gap-2 rounded-full border border-line bg-surface px-4 py-1.5 text-xs font-medium text-[#9A9A9A]"
             >
               <span className="flex h-1.5 w-1.5 rounded-full bg-gold" /> Rain or Not We Serve
             </motion.span>
             <motion.h1
               initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 0.05, ease: [0.22, 1, 0.36, 1] }}
-              className="mt-6 font-serif text-5xl font-light leading-[0.98] tracking-tight text-ink sm:text-6xl lg:text-7xl"
+              className="mt-6 font-serif text-5xl font-light leading-[0.98] tracking-tight text-cream sm:text-6xl lg:text-7xl"
             >
               Laundry, elevated to a{" "}
               <span className="italic text-gold">quiet luxury</span>.
             </motion.h1>
             <motion.p
               initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 0.15 }}
-              className="mt-7 max-w-lg text-lg leading-relaxed text-[#666666]"
+              className="mt-7 max-w-lg text-lg leading-relaxed text-[#9A9A9A]"
             >
               Premium wash, press and delivery for busy professionals,
               families and businesses across Katlehong. We collect it
@@ -68,7 +68,7 @@ export default function Home() {
                 Start your plan
                 <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" strokeWidth={1.75} />
               </Link>
-              <Link to="/pricing" data-testid="hero-cta-secondary" className="rounded-full border border-line bg-white px-8 py-4 text-sm font-medium text-ink transition-all duration-300 hover:border-ink">
+              <Link to="/pricing" data-testid="hero-cta-secondary" className="rounded-full border border-line bg-surface px-8 py-4 text-sm font-medium text-cream transition-all duration-300 hover:border-ink">
                 Calculate a price
               </Link>
             </motion.div>
@@ -80,7 +80,7 @@ export default function Home() {
               </div>
               <div>
                 <div className="flex text-gold">{[...Array(5)].map((_, i) => <Star key={i} className="h-4 w-4 fill-gold" strokeWidth={0} />)}</div>
-                <p className="mt-1 text-xs text-[#666666]">Loved by 2,400+ subscribers</p>
+                <p className="mt-1 text-xs text-[#9A9A9A]">Loved by 2,400+ subscribers</p>
               </div>
             </div>
           </div>
@@ -97,25 +97,25 @@ export default function Home() {
               className="glass-card absolute -bottom-6 -left-6 w-56 rounded-2xl border border-line p-5 shadow-xl"
             >
               <div className="flex items-center gap-2 text-gold"><Truck className="h-5 w-5" strokeWidth={1.5} /><span className="text-xs font-bold uppercase tracking-wider">On its way</span></div>
-              <p className="mt-2 text-sm font-medium text-ink">Order TSU-1042 delivered in 41 hours</p>
+              <p className="mt-2 text-sm font-medium text-cream">Order TSU-1042 delivered in 41 hours</p>
             </motion.div>
             <motion.div
               animate={{ y: [0, 12, 0] }} transition={{ duration: 7, repeat: Infinity, ease: "easeInOut" }}
               className="glass-card absolute -right-4 top-10 rounded-2xl border border-line px-5 py-4 shadow-xl"
             >
-              <p className="font-serif text-3xl text-ink">R19<span className="text-sm text-[#666666]">/kg</span></p>
-              <p className="text-xs text-[#666666]">Wash & Fold from</p>
+              <p className="font-serif text-3xl text-cream">R19<span className="text-sm text-[#9A9A9A]">/kg</span></p>
+              <p className="text-xs text-[#9A9A9A]">Wash & Fold from</p>
             </motion.div>
           </motion.div>
         </div>
 
         {/* Trust badges */}
         <div className="container-x mt-20">
-          <Reveal className="grid grid-cols-2 gap-4 rounded-3xl border border-line bg-white p-6 md:grid-cols-4">
+          <Reveal className="grid grid-cols-2 gap-4 rounded-3xl border border-line bg-surface p-6 md:grid-cols-4">
             {TRUST.map((t) => (
               <div key={t.label} className="flex items-center gap-3 px-2">
                 <t.icon className="h-6 w-6 shrink-0 text-gold" strokeWidth={1.25} />
-                <span className="text-sm font-medium text-ink">{t.label}</span>
+                <span className="text-sm font-medium text-cream">{t.label}</span>
               </div>
             ))}
           </Reveal>
@@ -126,21 +126,21 @@ export default function Home() {
       <section className="container-x py-24 lg:py-32">
         <div className="flex flex-col justify-between gap-6 lg:flex-row lg:items-end">
           <SectionHeading eyebrow="What we do" title="A service for every fabric in your life" lede="From weekly essentials to your finest garments — handled with the same obsessive care." />
-          <Reveal><Link to="/services" className="group inline-flex items-center gap-1.5 text-sm font-medium text-ink">View all services <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" strokeWidth={1.75} /></Link></Reveal>
+          <Reveal><Link to="/services" className="group inline-flex items-center gap-1.5 text-sm font-medium text-cream">View all services <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" strokeWidth={1.75} /></Link></Reveal>
         </div>
         <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {SERVICES.slice(0, 6).map((s, i) => (
             <Reveal key={s.slug} delay={i * 0.06}>
-              <Link to={`/services/${s.slug}`} data-testid={`home-service-${s.slug}`} className="group flex h-full flex-col overflow-hidden rounded-3xl border border-line bg-white transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_16px_60px_rgba(0,0,0,0.06)]">
+              <Link to={`/services/${s.slug}`} data-testid={`home-service-${s.slug}`} className="group flex h-full flex-col overflow-hidden rounded-3xl border border-line bg-surface transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_16px_60px_rgba(0,0,0,0.06)]">
                 <div className="relative h-48 overflow-hidden">
                   <img src={s.image} alt={s.title} className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105" />
                   <span className="absolute left-4 top-4 flex h-11 w-11 items-center justify-center rounded-xl glass-card"><s.icon className="h-5 w-5 text-gold" strokeWidth={1.5} /></span>
                 </div>
                 <div className="flex flex-1 flex-col p-6">
-                  <h3 className="font-serif text-2xl text-ink">{s.title}</h3>
-                  <p className="mt-2 flex-1 text-sm leading-relaxed text-[#666666]">{s.tagline}</p>
+                  <h3 className="font-serif text-2xl text-cream">{s.title}</h3>
+                  <p className="mt-2 flex-1 text-sm leading-relaxed text-[#9A9A9A]">{s.tagline}</p>
                   <div className="mt-5 flex items-center justify-between border-t border-line pt-4">
-                    <span className="text-sm text-[#666666]">From <b className="text-ink">{s.from ? ZAR(s.from) : "Free"}</b> {s.unit}</span>
+                    <span className="text-sm text-[#9A9A9A]">From <b className="text-cream">{s.from ? ZAR(s.from) : "Free"}</b> {s.unit}</span>
                     <ArrowRight className="h-4 w-4 text-gold transition-transform group-hover:translate-x-1" strokeWidth={1.75} />
                   </div>
                 </div>
@@ -151,16 +151,16 @@ export default function Home() {
       </section>
 
       {/* WHY CHOOSE US */}
-      <section className="bg-white py-24 lg:py-32">
+      <section className="bg-surface py-24 lg:py-32">
         <div className="container-x">
           <SectionHeading center eyebrow="Why TS Unique" title="The details others overlook" lede="We built the laundry service we always wished existed — precise, reliable and genuinely premium." />
           <div className="mt-16 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
             {WHY.map((w, i) => (
               <Reveal key={w.title} delay={i * 0.08} className="h-full">
-                <div className="flex h-full flex-col rounded-3xl border border-line bg-cloud p-8 transition-all duration-500 hover:-translate-y-2 hover:bg-white hover:shadow-[0_16px_60px_rgba(0,0,0,0.05)]">
+                <div className="flex h-full flex-col rounded-3xl border border-line bg-cloud p-8 transition-all duration-500 hover:-translate-y-2 hover:bg-surface hover:shadow-[0_16px_60px_rgba(0,0,0,0.05)]">
                   <span className="flex h-12 w-12 items-center justify-center rounded-2xl bg-gold/10"><w.icon className="h-6 w-6 text-gold" strokeWidth={1.25} /></span>
-                  <h3 className="mt-6 font-serif text-2xl text-ink">{w.title}</h3>
-                  <p className="mt-3 text-sm leading-relaxed text-[#666666]">{w.text}</p>
+                  <h3 className="mt-6 font-serif text-2xl text-cream">{w.title}</h3>
+                  <p className="mt-3 text-sm leading-relaxed text-[#9A9A9A]">{w.text}</p>
                 </div>
               </Reveal>
             ))}
@@ -176,8 +176,8 @@ export default function Home() {
             <Reveal key={s.n} delay={i * 0.1}>
               <div className="relative">
                 <span className="font-serif text-6xl font-light text-gold/25">{s.n}</span>
-                <h3 className="mt-3 font-serif text-2xl text-ink">{s.title}</h3>
-                <p className="mt-2 text-sm leading-relaxed text-[#666666]">{s.text}</p>
+                <h3 className="mt-3 font-serif text-2xl text-cream">{s.title}</h3>
+                <p className="mt-2 text-sm leading-relaxed text-[#9A9A9A]">{s.text}</p>
               </div>
             </Reveal>
           ))}
@@ -185,7 +185,7 @@ export default function Home() {
       </section>
 
       {/* PRICING CALCULATOR */}
-      <section className="bg-white py-24 lg:py-32">
+      <section className="bg-surface py-24 lg:py-32">
         <div className="container-x">
           <SectionHeading center eyebrow="Instant pricing" title="No surprises, just a fair estimate" lede="Slide, select and see your price in real time. Transparent per-kilogram pricing." />
           <div className="mx-auto mt-14 max-w-4xl"><Reveal><PricingCalculator /></Reveal></div>
@@ -198,11 +198,11 @@ export default function Home() {
         <div className="mt-16 grid gap-6 lg:grid-cols-3">
           {PLANS.slice(0, 3).map((p, i) => <Reveal key={p.id} delay={i * 0.08} className="h-full"><PlanCard plan={p} /></Reveal>)}
         </div>
-        <Reveal className="mt-10 text-center"><Link to="/subscriptions" className="group inline-flex items-center gap-1.5 text-sm font-medium text-ink">Compare all five plans <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" strokeWidth={1.75} /></Link></Reveal>
+        <Reveal className="mt-10 text-center"><Link to="/subscriptions" className="group inline-flex items-center gap-1.5 text-sm font-medium text-cream">Compare all five plans <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" strokeWidth={1.75} /></Link></Reveal>
       </section>
 
       {/* DASHBOARD PREVIEW */}
-      <section className="bg-white py-24 lg:py-32">
+      <section className="bg-surface py-24 lg:py-32">
         <div className="container-x grid items-center gap-16 lg:grid-cols-2">
           <SectionHeading eyebrow="Your portal" title="A dashboard as polished as your shirts" lede="Track orders, manage your subscription, view invoices and earn referral rewards — all in one beautiful place." />
           <Reveal>
@@ -210,13 +210,13 @@ export default function Home() {
               <div className="flex items-center gap-1.5 border-b border-line bg-cloud px-4 py-3">
                 <span className="h-3 w-3 rounded-full bg-[#ddd]" /><span className="h-3 w-3 rounded-full bg-[#ddd]" /><span className="h-3 w-3 rounded-full bg-gold/60" />
               </div>
-              <div className="space-y-4 bg-white p-6">
+              <div className="space-y-4 bg-surface p-6">
                 <div className="flex gap-4">
-                  <div className="flex-1 rounded-2xl border border-line p-4"><p className="text-xs text-[#666666]">Remaining washes</p><p className="mt-1 font-serif text-3xl text-ink">3<span className="text-base text-[#666666]">/8</span></p></div>
-                  <div className="flex-1 rounded-2xl border border-line p-4"><p className="text-xs text-[#666666]">Plan</p><p className="mt-1 font-serif text-2xl text-gold">Family</p></div>
+                  <div className="flex-1 rounded-2xl border border-line p-4"><p className="text-xs text-[#9A9A9A]">Remaining washes</p><p className="mt-1 font-serif text-3xl text-cream">3<span className="text-base text-[#9A9A9A]">/8</span></p></div>
+                  <div className="flex-1 rounded-2xl border border-line p-4"><p className="text-xs text-[#9A9A9A]">Plan</p><p className="mt-1 font-serif text-2xl text-gold">Family</p></div>
                 </div>
                 <div className="rounded-2xl border border-line p-4">
-                  <p className="text-xs text-[#666666]">Monthly usage</p>
+                  <p className="text-xs text-[#9A9A9A]">Monthly usage</p>
                   <div className="mt-3 flex items-end gap-2">
                     {[40, 55, 35, 70, 50, 65].map((h, i) => <span key={i} className="flex-1 rounded-t bg-gold/70" style={{ height: h }} />)}
                   </div>
@@ -245,12 +245,12 @@ export default function Home() {
         <div className="mt-16 grid gap-6 md:grid-cols-2">
           {TESTIMONIALS.map((t, i) => (
             <Reveal key={t.name} delay={i * 0.06}>
-              <figure className="flex h-full flex-col rounded-3xl border border-line bg-white p-8">
+              <figure className="flex h-full flex-col rounded-3xl border border-line bg-surface p-8">
                 <Quote className="h-8 w-8 text-gold/40" strokeWidth={1.25} />
-                <blockquote className="mt-4 flex-1 font-serif text-xl font-light leading-relaxed text-ink">"{t.quote}"</blockquote>
+                <blockquote className="mt-4 flex-1 font-serif text-xl font-light leading-relaxed text-cream">"{t.quote}"</blockquote>
                 <figcaption className="mt-6 flex items-center gap-3 border-t border-line pt-6">
                   <img src={t.avatar} alt={t.name} className="h-11 w-11 rounded-full object-cover" />
-                  <div><p className="text-sm font-semibold text-ink">{t.name}</p><p className="text-xs text-[#666666]">{t.role}</p></div>
+                  <div><p className="text-sm font-semibold text-cream">{t.name}</p><p className="text-xs text-[#9A9A9A]">{t.role}</p></div>
                 </figcaption>
               </figure>
             </Reveal>
@@ -259,15 +259,15 @@ export default function Home() {
       </section>
 
       {/* FAQ */}
-      <section className="bg-white py-24 lg:py-32">
+      <section className="bg-surface py-24 lg:py-32">
         <div className="container-x grid gap-16 lg:grid-cols-[0.8fr_1.2fr]">
           <SectionHeading eyebrow="Questions" title="Everything you might ask" lede="Still curious? Reach us anytime on WhatsApp — we reply fast." />
           <Reveal>
             <Accordion type="single" collapsible className="w-full" data-testid="home-faq">
               {FAQS.slice(0, 5).map((f, i) => (
                 <AccordionItem key={i} value={`item-${i}`} className="border-line">
-                  <AccordionTrigger className="text-left font-serif text-lg text-ink hover:text-gold hover:no-underline">{f.q}</AccordionTrigger>
-                  <AccordionContent className="text-sm leading-relaxed text-[#666666]">{f.a}</AccordionContent>
+                  <AccordionTrigger className="text-left font-serif text-lg text-cream hover:text-gold hover:no-underline">{f.q}</AccordionTrigger>
+                  <AccordionContent className="text-sm leading-relaxed text-[#9A9A9A]">{f.a}</AccordionContent>
                 </AccordionItem>
               ))}
             </Accordion>
@@ -286,8 +286,8 @@ export default function Home() {
               <h2 className="font-serif text-4xl font-light leading-tight sm:text-5xl">Ready to never do laundry again?</h2>
               <p className="mt-5 text-lg text-white/60">Join the households, students and professionals across Katlehong who've handed over the hamper for good.</p>
               <div className="mt-9 flex flex-wrap justify-center gap-4">
-                <Link to="/register" className="rounded-full bg-gold px-8 py-4 text-sm font-medium text-white transition-all duration-300 hover:bg-white hover:text-ink hover:-translate-y-1">Get started free</Link>
-                <Link to="/contact" className="rounded-full border border-white/20 px-8 py-4 text-sm font-medium text-white transition-all duration-300 hover:bg-white/10">Talk to us</Link>
+                <Link to="/register" className="rounded-full bg-gold px-8 py-4 text-sm font-medium text-white transition-all duration-300 hover:bg-surface hover:text-cream hover:-translate-y-1">Get started free</Link>
+                <Link to="/contact" className="rounded-full border border-white/20 px-8 py-4 text-sm font-medium text-white transition-all duration-300 hover:bg-surface/10">Talk to us</Link>
               </div>
             </div>
           </div>
@@ -304,10 +304,10 @@ function NewsletterGallery() {
       <div className="grid gap-12 lg:grid-cols-[1fr_1.2fr] lg:items-center">
         <Reveal>
           <span className="mb-4 inline-block text-xs font-bold uppercase tracking-[0.25em] text-gold">Stay in the loop</span>
-          <h2 className="font-serif text-4xl font-light leading-tight text-ink sm:text-5xl">Fresh tips, straight to your inbox</h2>
-          <p className="mt-5 text-[#666666]">Care guides, member offers and the occasional laundry secret. No spam, unsubscribe anytime.</p>
+          <h2 className="font-serif text-4xl font-light leading-tight text-cream sm:text-5xl">Fresh tips, straight to your inbox</h2>
+          <p className="mt-5 text-[#9A9A9A]">Care guides, member offers and the occasional laundry secret. No spam, unsubscribe anytime.</p>
           <form onSubmit={(e) => e.preventDefault()} className="mt-8 flex max-w-md gap-3" data-testid="newsletter-form">
-            <input type="email" required placeholder="you@email.co.za" data-testid="newsletter-input" className="flex-1 rounded-full border border-line bg-white px-6 py-3.5 text-sm outline-none transition-colors focus:border-gold" />
+            <input type="email" required placeholder="you@email.co.za" data-testid="newsletter-input" className="flex-1 rounded-full border border-line bg-surface px-6 py-3.5 text-sm outline-none transition-colors focus:border-gold" />
             <button type="submit" data-testid="newsletter-submit" className="rounded-full bg-ink px-6 py-3.5 text-sm font-medium text-white transition-colors hover:bg-gold">Subscribe</button>
           </form>
         </Reveal>
@@ -319,7 +319,7 @@ function NewsletterGallery() {
               </div>
             ))}
           </div>
-          <p className="mt-4 text-center text-xs text-[#666666]">Follow @tsuniquelaundry</p>
+          <p className="mt-4 text-center text-xs text-[#9A9A9A]">Follow @tsuniquelaundry</p>
         </Reveal>
       </div>
     </section>

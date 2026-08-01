@@ -15,8 +15,10 @@ module.exports = {
           soft: "#F6EFDB",
         },
         ink: "#111111",
-        cloud: "#FAFAFA",
-        line: "#ECECEC",
+        cream: "#F4F1EA",
+        cloud: "#0B0B0B",
+        surface: "#161616",
+        line: "#242424",
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
         card: {
