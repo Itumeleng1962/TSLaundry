@@ -4,6 +4,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, ArrowUpRight } from "lucide-react";
 import { NAV_LINKS } from "@/lib/constants";
 import { Logo } from "@/components/common/Logo";
+import { ThemeToggle } from "@/components/common/ThemeToggle";
 import { useAuth } from "@/context/AuthContext";
 
 export function Navbar() {
@@ -29,7 +30,7 @@ export function Navbar() {
       data-testid="main-navbar"
     >
       <nav className="container-x flex items-center justify-between">
-        <Logo />
+        <Logo dark={!scrolled} />
 
         <div className="hidden items-center gap-8 lg:flex">
           {NAV_LINKS.map((l) => (
@@ -49,6 +50,7 @@ export function Navbar() {
         </div>
 
         <div className="hidden items-center gap-3 lg:flex">
+          <ThemeToggle />
           {user ? (
             <button
               onClick={() => navigate(dashHref)}
@@ -62,7 +64,7 @@ export function Navbar() {
               <Link
                 to="/login"
                 data-testid="nav-login-link"
-                className="text-sm font-medium text-cream/80 transition-colors hover:text-cream"
+                className={`text-sm font-medium transition-colors ${scrolled ? "text-cream/80 hover:text-cream" : "text-white/80 hover:text-white"}`}
               >
                 Sign in
               </Link>
@@ -78,14 +80,17 @@ export function Navbar() {
           )}
         </div>
 
-        <button
-          className="lg:hidden"
-          onClick={() => setOpen((v) => !v)}
-          data-testid="nav-mobile-toggle"
-          aria-label="Toggle menu"
-        >
-          {open ? <X className="h-6 w-6" strokeWidth={1.5} /> : <Menu className="h-6 w-6" strokeWidth={1.5} />}
-        </button>
+        <div className="flex items-center gap-2 lg:hidden">
+          <ThemeToggle />
+          <button
+            onClick={() => setOpen((v) => !v)}
+            data-testid="nav-mobile-toggle"
+            aria-label="Toggle menu"
+            className={scrolled ? "text-cream" : "text-white"}
+          >
+            {open ? <X className="h-6 w-6" strokeWidth={1.5} /> : <Menu className="h-6 w-6" strokeWidth={1.5} />}
+          </button>
+        </div>
       </nav>
 
       <AnimatePresence>

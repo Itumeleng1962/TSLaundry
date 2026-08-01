@@ -4,6 +4,7 @@ import { AnimatePresence } from "framer-motion";
 import "@/App.css";
 
 import { AuthProvider, useAuth } from "@/context/AuthContext";
+import { ThemeProvider } from "@/context/ThemeContext";
 import { ScrollToTop } from "@/components/common/ScrollToTop";
 import { Toaster } from "@/components/ui/sonner";
 import { MarketingLayout } from "@/components/layout/MarketingLayout";
@@ -123,6 +124,7 @@ export default function App() {
   return (
     <div className="App">
       <BrowserRouter>
+        <ThemeProvider>
         <AuthProvider>
           <ScrollToTop />
           <AnimatePresence mode="wait">
@@ -130,6 +132,7 @@ export default function App() {
           </AnimatePresence>
           <Toaster position="top-center" />
         </AuthProvider>
+        </ThemeProvider>
       </BrowserRouter>
     </div>
   );

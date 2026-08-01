@@ -36,82 +36,101 @@ export default function Home() {
   return (
     <>
       {/* HERO */}
-      <section className="relative overflow-hidden bg-cloud pt-32 pb-20 lg:pt-44 lg:pb-28">
-        <div className="container-x grid items-center gap-16 lg:grid-cols-[1.1fr_0.9fr]">
-          <div>
-            <motion.span
-              initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}
-              className="inline-flex items-center gap-2 rounded-full border border-line bg-surface px-4 py-1.5 text-xs font-medium text-[#9A9A9A]"
-            >
-              <span className="flex h-1.5 w-1.5 rounded-full bg-gold" /> Rain or Not We Serve
-            </motion.span>
-            <motion.h1
-              initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 0.05, ease: [0.22, 1, 0.36, 1] }}
-              className="mt-6 font-serif text-5xl font-light leading-[0.98] tracking-tight text-cream sm:text-6xl lg:text-7xl"
-            >
-              Laundry, elevated to a{" "}
-              <span className="italic text-gold">quiet luxury</span>.
-            </motion.h1>
-            <motion.p
-              initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 0.15 }}
-              className="mt-7 max-w-lg text-lg leading-relaxed text-[#9A9A9A]"
-            >
-              Premium wash, press and delivery for busy professionals,
-              families and businesses across Katlehong. We collect it
-              dirty, return it perfect.
-            </motion.p>
-            <motion.div
-              initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 0.25 }}
-              className="mt-9 flex flex-wrap items-center gap-4"
-            >
-              <Link to="/register" data-testid="hero-cta-primary" className="group inline-flex items-center gap-2 rounded-full bg-ink px-8 py-4 text-sm font-medium text-white transition-all duration-300 hover:bg-gold hover:-translate-y-1">
-                Start your plan
-                <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" strokeWidth={1.75} />
-              </Link>
-              <Link to="/pricing" data-testid="hero-cta-secondary" className="rounded-full border border-line bg-surface px-8 py-4 text-sm font-medium text-cream transition-all duration-300 hover:border-ink">
-                Calculate a price
-              </Link>
-            </motion.div>
-            <div className="mt-10 flex items-center gap-4">
-              <div className="flex -space-x-3">
-                {TESTIMONIALS.map((t) => (
-                  <img key={t.name} src={t.avatar} alt={t.name} className="h-10 w-10 rounded-full border-2 border-cloud object-cover" />
-                ))}
-              </div>
-              <div>
-                <div className="flex text-gold">{[...Array(5)].map((_, i) => <Star key={i} className="h-4 w-4 fill-gold" strokeWidth={0} />)}</div>
-                <p className="mt-1 text-xs text-[#9A9A9A]">Loved by 2,400+ subscribers</p>
-              </div>
+      <section className="relative flex min-h-[94vh] items-end overflow-hidden">
+        {/* Full-bleed background */}
+        <div className="absolute inset-0">
+          <motion.img
+            initial={{ scale: 1.12 }} animate={{ scale: 1 }} transition={{ duration: 1.6, ease: [0.22, 1, 0.36, 1] }}
+            src={IMG.heroTowels} alt="Premium folded laundry, freshly cleaned" className="h-full w-full object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-black via-black/60 to-black/30" />
+          <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/25 to-transparent" />
+          <div className="noise absolute inset-0" />
+        </div>
+
+        {/* Floating glass stat card (parallax float) */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.6 }}
+          className="absolute right-6 top-28 z-10 hidden lg:block xl:right-16"
+        >
+          <motion.div
+            animate={{ y: [0, -14, 0] }} transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
+            className="w-60 rounded-2xl border border-white/15 bg-white/10 p-6 backdrop-blur-md"
+          >
+            <p className="font-serif text-5xl font-light text-white">R19<span className="text-base text-white/60">/kg</span></p>
+            <p className="text-sm text-white/70">Wash, Dry &amp; Fold from</p>
+            <div className="mt-4 flex items-center gap-2 border-t border-white/15 pt-4 text-gold">
+              <Truck className="h-4 w-4" strokeWidth={1.5} /><span className="text-xs font-medium text-white/80">Free collection within 3 km</span>
             </div>
-          </div>
+          </motion.div>
+        </motion.div>
+
+        {/* Content */}
+        <div className="container-x relative z-10 pb-24 pt-40 lg:pb-32">
+          <motion.span
+            initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}
+            className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-1.5 text-xs font-medium text-white backdrop-blur-md"
+          >
+            <span className="flex h-1.5 w-1.5 rounded-full bg-gold" /> Rain or Not We Serve · Est 2025
+          </motion.span>
+
+          <motion.h1
+            initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.9, delay: 0.05, ease: [0.22, 1, 0.36, 1] }}
+            className="mt-6 max-w-4xl font-serif text-5xl font-light leading-[0.95] tracking-tight text-white sm:text-6xl lg:text-8xl"
+          >
+            Laundry, elevated to a <span className="italic text-gold">quiet luxury</span>.
+          </motion.h1>
+
+          <motion.p
+            initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.9, delay: 0.18 }}
+            className="mt-7 max-w-xl text-lg leading-relaxed text-white/75"
+          >
+            Premium wash, press and doorstep delivery for busy homes and businesses across Katlehong. We collect it dirty, return it perfect.
+          </motion.p>
 
           <motion.div
-            initial={{ opacity: 0, scale: 0.96 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
-            className="relative"
+            initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.9, delay: 0.3 }}
+            className="mt-9 flex flex-wrap items-center gap-4"
           >
-            <div className="overflow-hidden rounded-[2rem] border border-line shadow-[0_30px_80px_rgba(0,0,0,0.1)]">
-              <img src={IMG.heroTowels} alt="Freshly folded premium laundry" className="h-[520px] w-full object-cover" />
+            <Link to="/register" data-testid="hero-cta-primary" className="group inline-flex items-center gap-2 rounded-full bg-gold px-8 py-4 text-sm font-medium text-white transition-all duration-300 hover:-translate-y-1 hover:bg-white hover:text-ink">
+              Start your plan
+              <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" strokeWidth={1.75} />
+            </Link>
+            <Link to="/pricing" data-testid="hero-cta-secondary" className="rounded-full border border-white/30 px-8 py-4 text-sm font-medium text-white backdrop-blur-md transition-all duration-300 hover:bg-white/10">
+              Calculate a price
+            </Link>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.9, delay: 0.45 }}
+            className="mt-12 flex items-center gap-4"
+          >
+            <div className="flex -space-x-3">
+              {TESTIMONIALS.map((t) => (
+                <img key={t.name} src={t.avatar} alt={t.name} className="h-10 w-10 rounded-full border-2 border-white/80 object-cover" />
+              ))}
             </div>
-            <motion.div
-              animate={{ y: [0, -14, 0] }} transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
-              className="glass-card absolute -bottom-6 -left-6 w-56 rounded-2xl border border-line p-5 shadow-xl"
-            >
-              <div className="flex items-center gap-2 text-gold"><Truck className="h-5 w-5" strokeWidth={1.5} /><span className="text-xs font-bold uppercase tracking-wider">On its way</span></div>
-              <p className="mt-2 text-sm font-medium text-cream">Order TSU-1042 delivered in 41 hours</p>
-            </motion.div>
-            <motion.div
-              animate={{ y: [0, 12, 0] }} transition={{ duration: 7, repeat: Infinity, ease: "easeInOut" }}
-              className="glass-card absolute -right-4 top-10 rounded-2xl border border-line px-5 py-4 shadow-xl"
-            >
-              <p className="font-serif text-3xl text-cream">R19<span className="text-sm text-[#9A9A9A]">/kg</span></p>
-              <p className="text-xs text-[#9A9A9A]">Wash & Fold from</p>
-            </motion.div>
+            <div>
+              <div className="flex text-gold">{[...Array(5)].map((_, i) => <Star key={i} className="h-4 w-4 fill-gold" strokeWidth={0} />)}</div>
+              <p className="mt-1 text-xs text-white/70">Loved by 2,400+ subscribers</p>
+            </div>
           </motion.div>
         </div>
 
-        {/* Trust badges */}
-        <div className="container-x mt-20">
-          <Reveal className="grid grid-cols-2 gap-4 rounded-3xl border border-line bg-surface p-6 md:grid-cols-4">
+        {/* Scroll cue */}
+        <motion.div
+          animate={{ y: [0, 8, 0] }} transition={{ duration: 1.8, repeat: Infinity, ease: "easeInOut" }}
+          className="absolute bottom-8 left-1/2 z-10 hidden -translate-x-1/2 flex-col items-center gap-2 text-white/50 lg:flex"
+        >
+          <span className="text-[10px] font-medium uppercase tracking-[0.3em]">Scroll</span>
+          <span className="h-10 w-px bg-gradient-to-b from-white/50 to-transparent" />
+        </motion.div>
+      </section>
+
+      {/* Trust badges */}
+      <section className="bg-cloud">
+        <div className="container-x -mt-12 relative z-20 pb-4">
+          <Reveal className="grid grid-cols-2 gap-4 rounded-3xl border border-line bg-surface p-6 shadow-[0_16px_60px_rgba(0,0,0,0.35)] md:grid-cols-4">
             {TRUST.map((t) => (
               <div key={t.label} className="flex items-center gap-3 px-2">
                 <t.icon className="h-6 w-6 shrink-0 text-gold" strokeWidth={1.25} />

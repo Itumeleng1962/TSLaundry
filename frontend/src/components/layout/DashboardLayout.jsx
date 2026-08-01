@@ -4,6 +4,7 @@ import {
   Gift, LogOut, Users, ShoppingBag, BarChart3, Settings,
 } from "lucide-react";
 import { Logo } from "@/components/common/Logo";
+import { ThemeToggle } from "@/components/common/ThemeToggle";
 import { useAuth } from "@/context/AuthContext";
 import { PageTransition } from "@/components/common/Motion";
 
@@ -38,8 +39,9 @@ export function DashboardLayout({ admin = false }) {
     <div className="min-h-screen bg-cloud lg:flex">
       {/* Sidebar */}
       <aside className="sticky top-0 z-30 hidden h-screen w-72 shrink-0 flex-col border-r border-line bg-surface lg:flex" data-testid="dashboard-sidebar">
-        <div className="border-b border-line px-6 py-6">
+        <div className="border-b border-line px-6 py-6 flex items-center justify-between">
           <Logo />
+          <ThemeToggle />
         </div>
         <nav className="flex-1 space-y-1 overflow-y-auto px-4 py-6">
           {nav.map((item) => (
@@ -80,9 +82,12 @@ export function DashboardLayout({ admin = false }) {
       {/* Mobile top bar */}
       <div className="sticky top-0 z-30 flex items-center justify-between border-b border-line bg-surface px-4 py-3 lg:hidden">
         <Logo />
-        <button onClick={onLogout} className="rounded-full border border-line px-4 py-2 text-sm font-medium">
-          Sign out
-        </button>
+        <div className="flex items-center gap-2">
+          <ThemeToggle />
+          <button onClick={onLogout} className="rounded-full border border-line px-4 py-2 text-sm font-medium">
+            Sign out
+          </button>
+        </div>
       </div>
 
       <div className="min-w-0 flex-1">
