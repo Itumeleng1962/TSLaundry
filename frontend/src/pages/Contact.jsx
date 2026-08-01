@@ -19,7 +19,7 @@ export default function Contact() {
 
   const onSubmit = async () => {
     await new Promise((r) => setTimeout(r, 700));
-    toast.success("Message sent! We'll be in touch within a few hours.");
+    toast.success("Message sent! We'll be in touch within a few hours.", { id: "contact-success" });
     reset();
   };
 
